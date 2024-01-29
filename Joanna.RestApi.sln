@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Joanna.RestApi.Tests", "Joanna.RestApi.Tests\Joanna.RestApi.Tests.csproj", "{EAC469FE-6B34-4EFC-B613-2AE1809D3F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joanna.RestApi.Framework", "Joanna.RestApi.Framework\Joanna.RestApi.Framework.csproj", "{E98B6CDA-3B66-4946-B259-CC0314F8CEDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC469FE-6B34-4EFC-B613-2AE1809D3F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC469FE-6B34-4EFC-B613-2AE1809D3F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC469FE-6B34-4EFC-B613-2AE1809D3F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC469FE-6B34-4EFC-B613-2AE1809D3F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98B6CDA-3B66-4946-B259-CC0314F8CEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98B6CDA-3B66-4946-B259-CC0314F8CEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98B6CDA-3B66-4946-B259-CC0314F8CEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98B6CDA-3B66-4946-B259-CC0314F8CEDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C20D97BF-7278-4785-AB5A-F26ADBB7759E}
+	EndGlobalSection
+EndGlobal
