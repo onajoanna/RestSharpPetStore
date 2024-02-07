@@ -1,20 +1,22 @@
-﻿using Joanna.RestApi.Framework.Requests.Pet;
+﻿using Joanna.RestApi.Framework.Requests;
+using Joanna.RestApi.Framework.Requests.Pet;
 using NUnit.Framework;
-using FluentAssertions;
 
 namespace Joanna.RestApi.Tests.Tests
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.All)]
     public abstract class PetApiTestsBase
+
     {
-        protected PetApiRequests? PetApiRequests;
+        protected PetStoreApiFacade? PetApi;
         protected static string? BaseUrl;
 
         [OneTimeSetUp]
         public void BeforeFixture()
         {
             BaseUrl = GlobalSetup.BaseUrl;
-            PetApiRequests = new PetApiRequests(BaseUrl!);
+            PetApi = new PetStoreApiFacade(BaseUrl!);
         }
     }
 }

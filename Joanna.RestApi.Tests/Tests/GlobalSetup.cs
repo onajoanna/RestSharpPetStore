@@ -12,7 +12,7 @@ namespace Joanna.RestApi.Tests.Tests
         public void BeforeFixture()
         {
             BaseUrl = TestContext.Parameters["baseUrl"];
-            BaseUrl.Should().NotBeNullOrEmpty("baseUrl parameter hould be specified");
+            BaseUrl.Should().NotBeNullOrEmpty("baseUrl parameter should be specified");
 
         }
     }

@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using FluentAssertions.Execution;
 using Joanna.RestApi.Framework.Models.Pet;
-using Joanna.RestApi.Framework.Requests.Pet;
+using Joanna.RestApi.Framework.Utils;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp;
@@ -38,15 +38,15 @@ namespace Joanna.RestApi.Tests.Tests.Pet
             };
 
             // Act
-            RestResponse response = PetApiRequests!.ExecuteApiPostPetRequest(petBody);
+            RestResponse response = PetApi!.PetSection().ExecuteApiPostPetRequest(petBody);
 
 
             // Assert
             response.StatusCode
                 .Should()
                 .Be(HttpStatusCode.OK);
-            var responseBody = JsonConvert.DeserializeObject<PetApiModelV2>(response.Content!);
-            responseBody.Should().NotBeNull();
+            PetApiModelV2 responseBody = response.ConvertToModel<PetApiModelV2>();
+
 
             using (new AssertionScope())
             {
@@ -86,12 +86,11 @@ namespace Joanna.RestApi.Tests.Tests.Pet
             };
 
             // Act
-            RestResponse response = PetApiRequests!.ExecuteApiPostPetRequest(petBody);
+            RestResponse response = PetApi!.PetSection().ExecuteApiPostPetRequest(petBody);
 
             // Assert
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            var responseBody = JsonConvert.DeserializeObject<PetApiModelV2>(response.Content!);
-            responseBody.Should().NotBeNull();
+            PetApiModelV2 responseBody = response.ConvertToModel<PetApiModelV2>();
             responseBody.Should().BeEquivalentTo(petBody, res => res.Excluding(res => res.Id));
 
 
